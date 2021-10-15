@@ -10,7 +10,6 @@
 namespace testing
 {
 	template<class First, class Second, std::size_t size>
-		requires std::is_pointer_v<typename std::iterator_traits<Second>::value_type>
 	class unique_pair
 	{
 	public:
