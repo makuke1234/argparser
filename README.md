@@ -10,8 +10,7 @@ include `argparser.hpp` to your project and you are good to go.
 
 # Obtaining
 
-The `argparser.hpp` single C++ header can be downloaded (here)
-[https://raw.githubusercontent.com/makuke1234/argparser/master/argparser.hpp].
+The `argparser.hpp` single C++ header can be downloaded [here](https://raw.githubusercontent.com/makuke1234/argparser/master/argparser.hpp).
 
 
 # Testing
