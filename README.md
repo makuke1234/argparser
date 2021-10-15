@@ -1,12 +1,16 @@
 # argparser
 
+![Build Status](https://img.shields.io/badge/passing-green.svg)
+![Release version](https://img.shields.io/badge/release-v1.0.0-green.svg)
+
 A C++ tool to parse command line arguments in your project using regex. Just
 include `argparser.hpp` to your project and you are good to go.
 
 
 # Obtaining
 
-The `argparser.hpp` single C++ header can be downloaded [here]()
+The `argparser.hpp` single C++ header can be downloaded [here]
+(https://raw.githubusercontent.com/makuke1234/argparser/master/argparser.hpp).
 
 
 # Testing
