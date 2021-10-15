@@ -30,25 +30,28 @@ namespace argparser
 			return buildStr;
 		}
 		
-		[[nodiscard]] std::string dashTemplateVecAppend(std::string_view str1)
+		namespace private_
 		{
-			std::string buildStr{ "(?:" };
-			buildStr.append(str1.cbegin(), str1.cend());
-			buildStr.append(")");
+			[[nodiscard]] std::string dashTemplateVecAppend(std::string_view str1)
+			{
+				std::string buildStr{ "(?:" };
+				buildStr.append(str1.cbegin(), str1.cend());
+				buildStr.append(")");
 
-			return buildStr;
-		}
+				return buildStr;
+			}
 
-		template<class ... Args>
-		[[nodiscard]] std::string dashTemplateVecAppend(std::string_view str1, Args && ... args)
-		{
-			std::string buildStr{ "(?:" };
-			buildStr.append(str1.cbegin(), str1.cend());
-			buildStr.append(")|");
+			template<class ... Args>
+			[[nodiscard]] std::string dashTemplateVecAppend(std::string_view str1, Args && ... args)
+			{
+				std::string buildStr{ "(?:" };
+				buildStr.append(str1.cbegin(), str1.cend());
+				buildStr.append(")|");
 
-			buildStr.append(dashTemplateVecAppend(std::forward<Args>(args)...));
+				buildStr.append(private_::dashTemplateVecAppend(std::forward<Args>(args)...));
 
-			return buildStr;
+				return buildStr;
+			}
 		}
 
 		
@@ -57,7 +60,7 @@ namespace argparser
 		{
 			std::string buildStr{ R"reg(^(?:--?|/)(?:)reg" };
 
-			buildStr.append(dashTemplateVecAppend(std::forward<Args>(args)...));
+			buildStr.append(private_::dashTemplateVecAppend(std::forward<Args>(args)...));
 
 			buildStr.append(R"reg()(.+))reg");
 			return buildStr;
