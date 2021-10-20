@@ -22,7 +22,7 @@ namespace argparser
 {
 	namespace regex
 	{
-		[[nodiscard]] std::string dashTemplate(std::string_view variableStr)
+		[[nodiscard]] inline std::string dashTemplate(std::string_view variableStr)
 		{
 			std::string buildStr{ R"reg(^(?:--?|/))reg" };
 			buildStr.append(variableStr.cbegin(), variableStr.cend());
@@ -32,7 +32,7 @@ namespace argparser
 		
 		namespace private_
 		{
-			[[nodiscard]] std::string dashTemplateVecAppend(std::string_view str1)
+			[[nodiscard]] inline std::string dashTemplateVecAppend(std::string_view str1)
 			{
 				std::string buildStr{ "(?:" };
 				buildStr.append(str1.cbegin(), str1.cend());
