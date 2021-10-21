@@ -1,7 +1,7 @@
 # argparser
 
 ![Build Status](https://img.shields.io/badge/build-passing-green.svg)
-![Release version](https://img.shields.io/badge/release-v1.0.1-green.svg)
+![Release version](https://img.shields.io/badge/release-v1.0.2-green.svg)
 ![C++ Version](https://img.shields.io/badge/version-C++17-blue.svg)
 
 A C++17 and onwards tool to parse command line arguments in your project using regex. Just

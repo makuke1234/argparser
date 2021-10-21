@@ -115,10 +115,11 @@ namespace argparser
 		static constexpr std::size_t any{ std::numeric_limits<std::size_t>::max() };
 
 	private:
-		const std::vector<std::string_view> m_args;
+		std::vector<std::string_view> m_args;
 
 	
 	public:
+		Tokeniser() noexcept = default;
 		Tokeniser(int argc, const char * const * argv)
 			: m_args{ argv, argv + argc }
 		{}
