@@ -4,6 +4,7 @@
 [![Release version](https://img.shields.io/github/v/release/makuke1234/argparser?display_name=release&include_prereleases)](https://github.com/makuke1234/argparser/releases/latest)
 [![Total downloads](https://img.shields.io/github/downloads/makuke1234/argparser/total)](https://github.com/makuke1234/argparser/releases)
 ![C++ Version](https://img.shields.io/badge/version-C++17-blue.svg)
+[![wakatime](https://wakatime.com/badge/github/makuke1234/argparser.svg)](https://wakatime.com/badge/github/makuke1234/argparser)
 
 A C++17 and onwards tool to parse command line arguments in your project using regex. Just
 include `argparser.hpp` to your project and you are good to go.
