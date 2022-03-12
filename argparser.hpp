@@ -127,6 +127,10 @@ namespace argparser
 		{
 			return this->m_token.value_or("");
 		}
+		[[nodiscard]] std::string getDef(const std::string & def) const
+		{
+			return this->m_token.value_or(def);
+		}
 		
 		[[nodiscard]] explicit constexpr operator bool() const noexcept
 		{
